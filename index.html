@@ -42,12 +42,6 @@
       font-weight: bold;
       font-size: 1.1em;
     }
-    #map {
-      width: 100%;
-      height: 300px;
-      margin-top: 30px;
-      border-radius: 12px;
-    }
   </style>
 </head>
 <body>
@@ -68,31 +62,6 @@
 
     <p class="date-place">2025.07.12(토) 17:00<br />
       구로아트밸리 예술극장</p>
-
-    <div id="map"></div>
   </div>
-
-  <!-- ✅ 카카오 지도 SDK - 자동 로딩 + services 포함 -->
-  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=cc35f6124873d583c0eb49143a472fe7&libraries=services"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const container = document.getElementById('map');
-      const options = {
-        center: new kakao.maps.LatLng(37.494812, 126.889649),
-        level: 3
-      };
-      const map = new kakao.maps.Map(container, options);
-
-      const marker = new kakao.maps.Marker({
-        position: new kakao.maps.LatLng(37.494812, 126.889649),
-        map: map
-      });
-
-      const infowindow = new kakao.maps.InfoWindow({
-        content: '<div style="padding:8px;font-size:14px;">구로아트밸리 예술극장</div>'
-      });
-      infowindow.open(map, marker);
-    });
-  </script>
 </body>
 </html>
