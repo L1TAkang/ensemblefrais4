@@ -72,27 +72,25 @@
     <div id="map"></div>
   </div>
 
-  <!-- ✅ 반드시 HTTPS로 불러오기 -->
-  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=cc35f6124873d583c0eb49143a472fe7&autoload=false"></script>
+  <!-- ✅ 자동 로딩 방식으로 변경 -->
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=cc35f6124873d583c0eb49143a472fe7"></script>
   <script>
-    kakao.maps.load(function () {
-      const container = document.getElementById('map');
-      const options = {
-        center: new kakao.maps.LatLng(37.494812, 126.889649),
-        level: 3
-      };
-      const map = new kakao.maps.Map(container, options);
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(37.494812, 126.889649),
+      level: 3
+    };
+    var map = new kakao.maps.Map(container, options);
 
-      const marker = new kakao.maps.Marker({
-        position: new kakao.maps.LatLng(37.494812, 126.889649),
-        map: map
-      });
-
-      const infowindow = new kakao.maps.InfoWindow({
-        content: '<div style="padding:8px;font-size:14px;">구로아트밸리 예술극장</div>'
-      });
-      infowindow.open(map, marker);
+    var marker = new kakao.maps.Marker({
+      position: new kakao.maps.LatLng(37.494812, 126.889649),
+      map: map
     });
+
+    var infowindow = new kakao.maps.InfoWindow({
+      content: '<div style="padding:8px;font-size:14px;">구로아트밸리 예술극장</div>'
+    });
+    infowindow.open(map, marker);
   </script>
 </body>
 </html>
