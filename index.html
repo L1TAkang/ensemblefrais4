@@ -11,7 +11,7 @@
       background-color: #601d1d;
       color: #fdf6f0;
       margin: 0;
-      padding: 24px;
+      padding: 24px 24px 12px; /* ✅ 아래 패딩만 줄임 */
       text-align: center;
     }
     h1 {
@@ -36,11 +36,12 @@
       font-size: 1em;
     }
     .concert-info p {
-      margin-bottom: 1.5em;
+      margin-bottom: 1.2em; /* ✅ 조금 더 촘촘하게 */
     }
     .date-place {
       font-weight: bold;
       font-size: 1.1em;
+      margin-bottom: 0; /* ✅ 마지막 공백 제거 */
     }
   </style>
 </head>
