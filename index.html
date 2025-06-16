@@ -49,6 +49,32 @@
   <h2>4th CONCERT</h2>
 
   <div class="concert-info">
+    <!-- 지도 표시 영역 -->
+<div id="map" style="width:100%; height:300px; margin-top:30px; border-radius:12px;"></div>
+
+<!-- 카카오 지도 API -->
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=cc35f6124873d583c0eb49143a472fe7&autoload=false"></script>
+<script>
+  kakao.maps.load(function () {
+    var container = document.getElementById('map');
+    var options = {
+      center: new kakao.maps.LatLng(37.494812, 126.889649),
+      level: 3
+    };
+    var map = new kakao.maps.Map(container, options);
+
+    var marker = new kakao.maps.Marker({
+      position: new kakao.maps.LatLng(37.494812, 126.889649),
+      map: map
+    });
+
+    var infowindow = new kakao.maps.InfoWindow({
+      content: '<div style="padding:8px;font-size:14px;">구로아트밸리 예술극장</div>'
+    });
+    infowindow.open(map, marker);
+  });
+</script>
+
     <p><strong>Pyotr Ilyich Tchaikovsky</strong><br>
       <em>Souvenir de Florence, D minor, Op.70</em><br>
       Vn1. 신재열 / Vn2. 정은교<br>
