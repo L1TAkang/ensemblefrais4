@@ -102,29 +102,24 @@
       </ul>     
     </div>
 
-    <div class="map-section">
-      <h3>찾아오시는 길</h3>
-      <div id="map"></div>
-      <a class="map-link" href="https://kko.kakao.com/JoK-7QYycb" target="_blank">📍 구로아트밸리 위치 보기 (카카오맵)</a>
-    </div>
+  <div class="map-section">
+  <h3>찾아오시는 길</h3>
+
+  <!-- 지도 이미지 -->
+  <img src="지도_구로아트밸리.jpg" alt="구로아트밸리 위치 지도" style="width: 100%; max-width: 600px; height: auto; border-radius: 8px;" />
+
+  <!-- 네이버 지도 링크 -->
+  <a class="map-link" href="https://naver.me/FHlkblpb" target="_blank" style="display: inline-block; margin-top: 12px; font-weight: bold; text-decoration: none; color: #2c3e50;">
+    📍 구로아트밸리 위치 보기 (네이버지도)
+  </a>
+
+  <!-- 교통정보 이미지 + 텍스트 -->
+  <div class="subway-info" style="margin-top: 16px; display: flex; align-items: center; gap: 8px;">
+    <img src="2247491d-43bb-46e4-81c4-37f070b59db6.png" alt="2호선, 7호선 대림역 4번 출구에서 831m" style="height: 24px;" />
+    <span style="font-size: 14px; color: #555;">(2호선, 7호선 대림역 4번 출구에서 도보 약 10분)</span>
   </div>
+</div>
 
-  <script>
-    var mapContainer = document.getElementById('map'), 
-        mapOption = {
-          center: new kakao.maps.LatLng(37.492431, 126.889420),
-          level: 3 
-        };
-
-    var map = new kakao.maps.Map(mapContainer, mapOption);
-
-    var markerPosition  = new kakao.maps.LatLng(37.492431, 126.889420); 
-
-    var marker = new kakao.maps.Marker({
-        position: markerPosition
-    });
-
-    marker.setMap(map);
   </script>
 </body>
 </html>
