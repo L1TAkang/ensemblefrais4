@@ -93,7 +93,7 @@
       background-color: #ebcaca;
     }
 
-    /* 추가된 버튼 공통 스타일 */
+    /* 버튼 공통 스타일 */
     .custom-button {
       display: inline-flex;
       align-items: center;
@@ -106,7 +106,6 @@
       text-decoration: none;
       box-shadow: 0 2px 5px rgba(0,0,0,0.08);
       transition: all 0.3s ease;
-      margin-top: 16px;
     }
 
     .donate-button {
@@ -121,6 +120,7 @@
     .youtube-button {
       background: linear-gradient(135deg, #cfd8dd, #a3b5be);
       color: #2b3a42;
+      justify-content: center;
     }
 
     .youtube-button:hover {
@@ -130,7 +130,6 @@
     .youtube-button img {
       height: 24px;
     }
-
   </style>
 </head>
 <body>
@@ -168,15 +167,12 @@
     <div class="map-section">
       <h3>찾아오시는 길</h3>
 
-      <!-- 지도 이미지 -->
       <img src="지도_구로아트밸리_2.jpg" alt="구로아트밸리 위치 지도" class="map-image" />
 
-      <!-- 대림역 출구 정보 -->
       <div class="location-info">
         2호선, 7호선 대림역 4번 출구에서 도보 약 10분 (약 831m)
       </div>
 
-      <!-- 위치 및 주차 버튼들 (가운데 정렬) -->
       <div class="map-link-wrapper">
         <a href="https://naver.me/FHlkblpb" target="_blank" class="map-link">
           📌 구로아트밸리 위치 보기 (네이버지도)
@@ -188,21 +184,22 @@
       </div>
     </div>
 
-<!-- 후원 및 유튜브 버튼 묶음 -->
-<div style="margin: 24px auto 0 auto; max-width: 600px; padding: 0 20px;">
-  <div style="display: flex; flex-direction: column; gap: 8px;">
-    <!-- 후원하기 버튼 -->
-    <a href="https://aq.gy/f/ndW_8" target="_blank" class="custom-button donate-button" style="width: 100%; text-align: center;">
-      앙상블 FRAIS 후원하러 가기👉
-    </a>
-
-    <!-- 유튜브 버튼 -->
-    <a href="https://www.youtube.com/@ensemblefrais" target="_blank" class="custom-button youtube-button" style="width: 100%; text-align: center;">
-      <img src="프레 로고.png" alt="앙상블 FRAIS 로고" style="height: 24px;" />
-      앙상블 FRAIS YouTube
-    </a>
-  </div>
-</div>
+    <!-- 후원 및 유튜브 버튼 -->
+    <div style="margin-top: 20px;">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+        <a href="https://aq.gy/f/ndW_8" target="_blank"
+           class="custom-button donate-button"
+           style="width: 100%; max-width: 100%; text-align: center;">
+          앙상블 FRAIS 후원하러 가기👉
+        </a>
+        <a href="https://www.youtube.com/@ensemblefrais" target="_blank"
+           class="custom-button youtube-button"
+           style="width: 100%; max-width: 100%;">
+          <img src="프레 로고2.png" alt="앙상블 FRAIS 로고" />
+          앙상블 FRAIS YouTube
+        </a>
+      </div>
+    </div>
 
   </div>
 </body>
