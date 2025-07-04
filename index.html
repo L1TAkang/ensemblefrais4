@@ -24,15 +24,8 @@
     .poster {
       width: 100%;
       border-radius: 10px;
-    }
-
-    .scroll-arrow {
-      width: 0;
-      height: 0;
-      margin: 20px auto 0 auto;
-      border-left: 20px solid transparent;
-      border-right: 20px solid transparent;
-      border-top: 20px solid #f8d9db;
+      display: block;
+      margin-bottom: 24px;
     }
 
     h3 {
@@ -96,10 +89,21 @@
       background-color: #ebcaca;
     }
 
-    .custom-button {
+    /* 버튼 공통 스타일 */
+    .button-section {
+      margin-top: 24px;
       display: flex;
+      flex-direction: column;
       align-items: center;
+      gap: 12px;
+    }
+
+    .custom-button {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
       justify-content: center;
+      align-items: center;
       gap: 10px;
       padding: 14px 20px;
       border-radius: 12px;
@@ -109,9 +113,6 @@
       text-decoration: none;
       box-shadow: 0 2px 5px rgba(0,0,0,0.08);
       transition: all 0.3s ease;
-      width: 100%;
-      max-width: 600px;
-      margin: 12px auto 0 auto;
     }
 
     .donate-button {
@@ -133,17 +134,16 @@
     }
 
     .youtube-button img {
-      height: 22px;
+      height: 24px;
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- 포스터 -->
     <img src="poster2.jpg" alt="앙상블 프레 4번째 콘서트 포스터" class="poster" />
 
-    <!-- 스크롤 유도 화살표 -->
-    <div class="scroll-arrow"></div>
-
+    <!-- 공지사항 박스 -->
     <div class="notice-box">
       <h3>공지사항</h3>
 
@@ -166,12 +166,12 @@
       <ul>
         <li>공연 당일에는 주변 교통이 혼잡하고 공영주차장 주차 공간이 협소하므로 가급적 대중교통을 이용해주시기 바랍니다.</li>
         <li>구로문화재단 지하 주차장은 일반 주차가 불가하오니 반드시 구로아트밸리 공영주차장을 이용하여 주시기 바랍니다.</li>
-        <li>공연관객 주차요금이 30% 할인 적용됩니다. (공영주차장 주차요금과 중복할인 불가)</li>
-        <li>기본료 1시간 1,800원 / 공연관객 30% 할인 / 경차, 저공해, 다둥이(서울시발급기준) 50% 감면 / 장애인, 국가유공자 80% 감면</li>
+        <li>공연관객 주차요금이 30% 할인 적용됩니다. (중복할인 불가)</li>
         <li>공연장 2층 물품보관소에 당일 공연티켓을 제시하면 주차요금 사전웹할인 등록이 가능합니다.</li>
       </ul>
     </div>
 
+    <!-- 찾아오시는 길 -->
     <div class="map-section">
       <h3>찾아오시는 길</h3>
       <img src="지도_구로아트밸리_2.jpg" alt="구로아트밸리 위치 지도" class="map-image" />
@@ -181,22 +181,23 @@
       <div class="map-link-wrapper">
         <a href="https://naver.me/FHlkblpb" target="_blank" class="map-link">
           📌 구로아트밸리 위치 보기 (네이버지도)
-        </a>
-        <br />
+        </a><br />
         <a href="https://tmap.life/0600d6ff" target="_blank" class="map-link">
           🚗 구로아트밸리 주차장 위치 보기 (티맵)
         </a>
       </div>
     </div>
 
-    <a href="https://aq.gy/f/ndW_8" target="_blank" class="custom-button donate-button">
-      앙상블 FRAIS 후원하러 가기
-    </a>
-
-    <a href="https://www.youtube.com/@ensemblefrais" target="_blank" class="custom-button youtube-button">
-      <img src="프레 로고2.png" alt="앙상블 FRAIS 로고" />
-      앙상블 FRAIS YouTube
-    </a>
+    <!-- 버튼 섹션 -->
+    <div class="button-section">
+      <a href="https://aq.gy/f/ndW_8" target="_blank" class="custom-button donate-button">
+        앙상블 FRAIS 후원하러 가기
+      </a>
+      <a href="https://www.youtube.com/@ensemblefrais" target="_blank" class="custom-button youtube-button">
+        <img src="프레 로고2.png" alt="앙상블 FRAIS 로고" />
+        앙상블 FRAIS YouTube
+      </a>
+    </div>
   </div>
 </body>
 </html>
