@@ -69,11 +69,17 @@
       margin-top: 8px;
       font-size: 14px;
       color: #555;
+      text-align: center;
+    }
+
+    .map-link-wrapper {
+      text-align: center;
+      margin-top: 12px;
     }
 
     .map-link {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 8px;
       font-size: 16px;
       font-weight: bold;
       text-decoration: none;
@@ -83,12 +89,46 @@
       border-radius: 8px;
     }
 
-    .map-link + .map-link {
-      margin-top: 8px;
-    }
-
     .map-link:hover {
       background-color: #ebcaca;
+    }
+
+    /* 추가된 버튼 공통 스타일 */
+    .custom-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: 'Pretendard', sans-serif;
+      text-decoration: none;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      margin-top: 16px;
+    }
+
+    .donate-button {
+      background: linear-gradient(135deg, #f9e6c4, #e7d0a3);
+      color: #3b1f1f;
+    }
+
+    .donate-button:hover {
+      background: linear-gradient(135deg, #f7dca7, #e9c890);
+    }
+
+    .youtube-button {
+      background: linear-gradient(135deg, #cfd8dd, #a3b5be);
+      color: #2b3a42;
+    }
+
+    .youtube-button:hover {
+      background: linear-gradient(135deg, #c3cfd4, #92a5af);
+    }
+
+    .youtube-button img {
+      height: 24px;
     }
 
   </style>
@@ -136,35 +176,31 @@
         2호선, 7호선 대림역 4번 출구에서 도보 약 10분 (약 831m)
       </div>
 
-      <!-- 네이버 지도 링크 -->
-      <a href="https://naver.me/FHlkblpb" target="_blank" class="map-link">
-        📌 구로아트밸리 위치 보기 (네이버지도)
+      <!-- 위치 및 주차 버튼들 (가운데 정렬) -->
+      <div class="map-link-wrapper">
+        <a href="https://naver.me/FHlkblpb" target="_blank" class="map-link">
+          📌 구로아트밸리 위치 보기 (네이버지도)
+        </a>
+        <br />
+        <a href="https://tmap.life/0600d6ff" target="_blank" class="map-link">
+          🚗 구로아트밸리 주차장 위치 보기 (티맵)
+        </a>
+      </div>
+    </div>
+
+    <!-- 후원하기 버튼 -->
+    <div style="text-align: center;">
+      <a href="https://aq.gy/f/ndW_8" target="_blank" class="custom-button donate-button">
+        앙상블 FRAIS 후원하러 가기👉
       </a>
 
-      <!-- 주차장 링크 -->
-      <a href="https://tmap.life/0600d6ff" target="_blank" class="map-link">
-        🚗 구로아트밸리 주차장 위치 보기 (티맵)
+      <!-- 유튜브 버튼 (로고 경로는 프로젝트 위치에 맞춰 변경 필요!) -->
+      <a href="https://www.youtube.com/@ensemblefrais" target="_blank" class="custom-button youtube-button">
+        <img src="프레 로고.png" alt="앙상블 FRAIS 로고" />
+        앙상블 FRAIS YouTube
       </a>
     </div>
-  </div>
 
-  <!-- FRAIS 후원하러 가기 버튼 -->
-<div class="container" style="margin-top: 28px; text-align: center;">
-  <a href="https://aq.gy/f/ndW_8" target="_blank"
-     style="display: inline-block;
-            background-color: #d6b37e;
-            color: #3b1f1f;
-            padding: 12px 20px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 16px;
-            text-decoration: none;
-            font-family: 'Pretendard', sans-serif;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: background-color 0.25s;">
-    앙상블 FRAIS 후원하러 가기👉
-  </a>
-</div>
-  
+  </div>
 </body>
 </html>
