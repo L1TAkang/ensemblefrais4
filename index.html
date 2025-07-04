@@ -135,4 +135,39 @@
     
   </script>
 </body>
+
+<!-- 후원 계좌 복사 버튼 -->
+<div style="margin-top: 32px; text-align: center;">
+  <div id="copy-section" onclick="copyDonationInfo()"
+       style="display: inline-block; padding: 12px 20px; background-color: #f8d9db;
+              border-radius: 8px; font-size: 15px; font-weight: bold;
+              color: #333; cursor: pointer; font-family: 'Pretendard', sans-serif;
+              line-height: 1.6;">
+    양상블 FRAIS 후원 계좌<br>
+    카카오뱅크 7942-12-63033<br>
+    예금주 김기민
+    <span id="copy-feedback" style="margin-left: 10px; color: #cc3366; font-size: 14px; visibility: hidden;">
+      복사되었습니다.
+    </span>
+  </div>
+</div>
+
+<script>
+  function copyDonationInfo() {
+    const text = `양상블 프레 후원 계좌
+카카오뱅크 7942-12-63033
+예금주 김기민`;
+
+    navigator.clipboard.writeText(text).then(() => {
+      const fb = document.getElementById('copy-feedback');
+      fb.style.visibility = 'visible';
+      setTimeout(() => {
+        fb.style.visibility = 'hidden';
+      }, 2000);
+    }).catch(err => {
+      alert('복사에 실패했어요');
+    });
+  }
+</script>
+
 </html>
